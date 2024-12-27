@@ -1,0 +1,12 @@
+.film-list {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px 0;
+}

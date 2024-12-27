@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="user-profile">
+  <h1>Profil Utilisateur</h1>
+  <p><strong>Nom :</strong> {{ user.name }}</p>
+  <p><strong>Email :</strong> {{ user.email }}</p>
+
+  <h2>Films Notés</h2>
+  <ul>
+    <li *ngFor="let film of user.ratedFilms">
+      <strong>{{ film.title }}</strong> - Note donnée : {{ film.rating }}
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
