@@ -12,3 +12,4 @@ import {NgbDropdown, NgbDropdownMenu, NgbDropdownToggle} from '@ng-bootstrap/ng-
 export class AppComponent {
   title = 'TD2';
 }
+
