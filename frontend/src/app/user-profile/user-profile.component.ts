@@ -1,21 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-user-profile',
+  standalone: true,
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+  styleUrls: ['./user-profile.component.css'],
+  imports: [
+    FormsModule
+  ]
 })
-export class UserProfileComponent implements OnInit {
-  user = {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    ratedFilms: [
-      { title: 'Inception', rating: 5 },
-      { title: 'Interstellar', rating: 4 },
-    ],
-  };
+export class UserProfileComponent {
+  user = { name: 'John Doe', email: 'john.doe@example.com' };
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  saveProfile() {
+    console.log('Profil sauvegardé :', this.user);
+  }
 }

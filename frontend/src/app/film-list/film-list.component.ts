@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilmService } from '../film.service';
 
 @Component({
   selector: 'app-film-list',
@@ -6,18 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./film-list.component.css']
 })
 export class FilmListComponent implements OnInit {
-  films = [
-    { title: 'Inception', rating: 4.5 },
-    { title: 'Interstellar', rating: 4.8 },
-    { title: 'The Dark Knight', rating: 4.7 },
-  ];
+  films: { title: string; description: string; rating: number }[] = [];
 
-  constructor() {}
+  constructor(private filmService: FilmService) {}
 
-  ngOnInit(): void {}
-
-  rateFilm(film: any, newRating: number) {
-    film.rating = newRating;
-    alert(`Vous avez noté "${film.title}" avec ${newRating} étoiles !`);
+  ngOnInit(): void {
+    this.films = this.filmService.getFilms();
   }
 }

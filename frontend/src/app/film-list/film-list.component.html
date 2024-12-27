@@ -5,16 +5,12 @@
   <title>Title</title>
 </head>
 <body>
-<div class="film-list">
-  <h1>Liste des Films</h1>
-  <ul>
-    <li *ngFor="let film of films">
-      <strong>{{ film.title }}</strong> - Note : {{ film.rating }}
-      <button (click)="rateFilm(film, 5)">Donner 5 étoiles</button>
-      <button (click)="rateFilm(film, 4)">Donner 4 étoiles</button>
-    </li>
-  </ul>
+<div *ngFor="let film of films" class="film-card">
+  <h2>{{ film.title }}</h2>
+  <p>{{ film.description }}</p>
+  <p>Note : {{ film.rating }} étoiles</p>
 </div>
+
 
 </body>
 </html>
