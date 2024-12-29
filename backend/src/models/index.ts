@@ -7,7 +7,7 @@ import swaggerDocument from '../swagger.json';
 
 const app = express();
 app.get('/', (req, res) => {
-    res.send('Bienvenue sur l\'API Node.js !');
+    res.send('Welcome on the API Node.js !');
 });
 app.use(cors({
     origin: 'http://localhost:4200'
