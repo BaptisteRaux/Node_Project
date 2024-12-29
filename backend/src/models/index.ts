@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from 'cors';
+import cors from '../frontend/node_modules/cors';
 import filmRoutes from '../routes/filmRoutes';
 import userRoutes from '../routes/userRoutes';
 import swaggerUi from 'swagger-ui-express';
