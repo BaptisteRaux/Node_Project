@@ -2,8 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Node Project API",
-    "version": "1.0.0",
-    "description": "API documentation for Node Project"
+    "version": "1.0.0"
   },
   "paths": {
     "/api/films": {
@@ -21,7 +20,9 @@
                     "properties": {
                       "id": { "type": "integer" },
                       "title": { "type": "string" },
-                      "description": { "type": "string" },
+                      "director": { "type": "string" },
+                      "release_date": { "type": "string", "format": "date" },
+                      "genre": { "type": "string" },
                       "rating": { "type": "integer" }
                     }
                   }
@@ -41,10 +42,12 @@
                 "type": "object",
                 "properties": {
                   "title": { "type": "string" },
-                  "description": { "type": "string" },
+                  "director": { "type": "string" },
+                  "release_date": { "type": "string", "format": "date" },
+                  "genre": { "type": "string" },
                   "rating": { "type": "integer" }
                 },
-                "required": ["title", "description", "rating"]
+                "required": ["title", "rating"]
               }
             }
           }
@@ -59,7 +62,9 @@
                   "properties": {
                     "id": { "type": "integer" },
                     "title": { "type": "string" },
-                    "description": { "type": "string" },
+                    "director": { "type": "string" },
+                    "release_date": { "type": "string", "format": "date" },
+                    "genre": { "type": "string" },
                     "rating": { "type": "integer" }
                   }
                 }
@@ -91,10 +96,12 @@
                 "type": "object",
                 "properties": {
                   "title": { "type": "string" },
-                  "description": { "type": "string" },
+                  "director": { "type": "string" },
+                  "release_date": { "type": "string", "format": "date" },
+                  "genre": { "type": "string" },
                   "rating": { "type": "integer" }
                 },
-                "required": ["title", "description", "rating"]
+                "required": ["title", "rating"]
               }
             }
           }
@@ -109,7 +116,9 @@
                   "properties": {
                     "id": { "type": "integer" },
                     "title": { "type": "string" },
-                    "description": { "type": "string" },
+                    "director": { "type": "string" },
+                    "release_date": { "type": "string", "format": "date" },
+                    "genre": { "type": "string" },
                     "rating": { "type": "integer" }
                   }
                 }
@@ -159,7 +168,8 @@
                     "properties": {
                       "id": { "type": "integer" },
                       "name": { "type": "string" },
-                      "email": { "type": "string" }
+                      "email": { "type": "string" },
+                      "age": { "type": "integer", "nullable": true }
                     }
                   }
                 }
@@ -178,7 +188,8 @@
                 "type": "object",
                 "properties": {
                   "name": { "type": "string" },
-                  "email": { "type": "string" }
+                  "email": { "type": "string" },
+                  "age": { "type": "integer", "nullable": true }
                 },
                 "required": ["name", "email"]
               }
@@ -195,7 +206,8 @@
                   "properties": {
                     "id": { "type": "integer" },
                     "name": { "type": "string" },
-                    "email": { "type": "string" }
+                    "email": { "type": "string" },
+                    "age": { "type": "integer", "nullable": true }
                   }
                 }
               }
@@ -226,7 +238,8 @@
                 "type": "object",
                 "properties": {
                   "name": { "type": "string" },
-                  "email": { "type": "string" }
+                  "email": { "type": "string" },
+                  "age": { "type": "integer", "nullable": true }
                 },
                 "required": ["name", "email"]
               }
@@ -243,7 +256,8 @@
                   "properties": {
                     "id": { "type": "integer" },
                     "name": { "type": "string" },
-                    "email": { "type": "string" }
+                    "email": { "type": "string" },
+                    "age": { "type": "integer", "nullable": true }
                   }
                 }
               }
