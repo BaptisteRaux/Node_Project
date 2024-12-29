@@ -4,6 +4,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import {AppComponent} from './app.component';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {BrowserModule} from '@angular/platform-browser';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppComponent
+    AppComponent,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

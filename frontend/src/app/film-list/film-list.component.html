@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-<div *ngFor="let film of films" class="film-card">
+<div *ngFor="let film of films$ | async" class="film-card">
   <h2>{{ film.title }}</h2>
   <p>{{ film.description }}</p>
   <p>Note : {{ film.rating }} étoiles</p>
 </div>
 
-
-</body>
-</html>

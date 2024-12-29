@@ -1,0 +1,18 @@
+<div class="user-profile">
+  <h1>Login</h1>
+  <form>
+    <label for="name">Username:</label>
+    <input id="name" [(ngModel)]="user.name" />
+
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="user.email" type="email" />
+
+    <label for="password">Password:</label>
+    <input id="password" [(ngModel)]="user.password" type="password" />
+
+    <button type="button" (click)="login()">Login</button>
+  </form>
+
+  <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</div>
