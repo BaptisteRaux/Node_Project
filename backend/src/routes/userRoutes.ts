@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * as userController from '../../../../../Documents/GitHub/Node_Project/backend/src/userController';
+import * as userController from '../userController';
 
 const router = Router();
 

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * as movieController from '../../../../../Documents/GitHub/Node_Project/backend/src/filmController';
+import * as movieController from '../filmController';
 
 const router = Router();
 
