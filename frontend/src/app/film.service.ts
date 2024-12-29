@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class FilmService {
-  getFilms() {
-    return [
-      { title: 'Inception', description: 'Un film de science-fiction.', rating: 5 },
-      { title: 'Avatar', description: 'Une aventure sur Pandora.', rating: 4 },
-      { title: 'Interstellar', description: 'Exploration spatiale et émotions.', rating: 5 },
-    ];
+  private apiUrl = 'http://localhost:3000/api/films';
+
+  constructor(private http: HttpClient) {}
+
+  getFilms(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 }
