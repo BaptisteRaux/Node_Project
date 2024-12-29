@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from '../frontend/node_modules/cors';
+import cors from 'cors';
 import filmRoutes from '../routes/filmRoutes';
 import userRoutes from '../routes/userRoutes';
 import swaggerUi from 'swagger-ui-express';
@@ -17,7 +17,6 @@ app.use('/api/films', filmRoutes);
 app.use('/api/users', userRoutes);
 
 const PORT = 3000;
-
 (async () => {
     app.listen(PORT, () => {
         console.log(`Server running on http://localhost:${PORT}`);

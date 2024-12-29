@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
 <div class="user-profile">
-  <h1>Profil Utilisateur</h1>
+  <h1>User Profile</h1>
   <form>
     <label for="name">Nom :</label>
     <input id="name" [(ngModel)]="user.name" />
@@ -14,10 +7,6 @@
     <label for="email">Email :</label>
     <input id="email" [(ngModel)]="user.email" />
 
-    <button (click)="saveProfile()">Sauvegarder</button>
+    <button (click)="saveProfile()">Save</button>
   </form>
-
 </div>
-
-</body>
-</html>

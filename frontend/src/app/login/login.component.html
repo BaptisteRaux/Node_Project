@@ -9,10 +9,8 @@
 
     <label for="password">Password:</label>
     <input id="password" [(ngModel)]="user.password" type="password" />
-
     <button type="button" (click)="login()">Login</button>
   </form>
-
   <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
   <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
 </div>
