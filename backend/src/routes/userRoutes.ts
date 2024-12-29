@@ -1,16 +1,15 @@
 import { Router } from 'express';
-import { User } from '../models';
+import * as userController from '../userController';
 
 const router = Router();
 
-router.get('/', async (req, res) => {
-    const users = await User.findAll();
-    res.json(users);
-});
+// Routes pour récupérer tous les utilisateurs et un utilisateur par ID
+router.get('/', userController.getUsers);
+router.get('/:id', userController.getUserById);
 
-router.post('/', async (req, res) => {
-    const newUser = await User.create(req.body);
-    res.json(newUser);
-});
+// Routes pour créer, mettre à jour et supprimer des utilisateurs
+router.post('/', userController.createUser);
+router.put('/:id', userController.updateUser);
+router.delete('/:id', userController.deleteUser);
 
 export default router;

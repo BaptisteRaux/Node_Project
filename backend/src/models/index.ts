@@ -1,18 +1,25 @@
-import sequelize from '../database';
-import { DataTypes } from 'sequelize';
+import express from 'express';
+import cors from 'cors';
+import filmRoutes from '../routes/filmRoutes';
+import userRoutes from '../routes/userRoutes';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from '../swagger.json';
 
-export const Film = sequelize.define('Film', {
-    title: { type: DataTypes.STRING, allowNull: false },
-    description: { type: DataTypes.TEXT, allowNull: false },
-    rating: { type: DataTypes.INTEGER, allowNull: false },
+const app = express();
+app.get('/', (req, res) => {
+    res.send('Bienvenue sur l\'API Node.js !');
 });
+app.use(cors());
+app.use(express.json());
+app.use('/api/films', filmRoutes);
+app.use('/api/users', userRoutes);
 
-export const User = sequelize.define('User', {
-    name: { type: DataTypes.STRING, allowNull: false },
-    email: { type: DataTypes.STRING, allowNull: false, unique: true },
-});
+const PORT = 3000;
 
-export const initModels = async () => {
-    await sequelize.sync({ force: true }); // Attention : supprime et recrée les tables à chaque démarrage
-    console.log('Database synchronized');
-};
+(async () => {
+    app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+    });
+})();
+
+app.use('/swagger-ui', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

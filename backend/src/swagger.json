@@ -30,6 +30,118 @@
             }
           }
         }
+      },
+      "post": {
+        "summary": "Create a new film",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "description": { "type": "string" },
+                  "rating": { "type": "integer" }
+                },
+                "required": ["title", "description", "rating"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Film created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "integer" },
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "rating": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/films/{id}": {
+      "put": {
+        "summary": "Update a film",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The ID of the film to update"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "description": { "type": "string" },
+                  "rating": { "type": "integer" }
+                },
+                "required": ["title", "description", "rating"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Film updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "integer" },
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "rating": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Film not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a film",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The ID of the film to delete"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Film deleted successfully"
+          },
+          "404": {
+            "description": "Film not found"
+          }
+        }
       }
     },
     "/api/users": {
@@ -53,6 +165,114 @@
                 }
               }
             }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new user",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string" }
+                },
+                "required": ["name", "email"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "integer" },
+                    "name": { "type": "string" },
+                    "email": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/users/{id}": {
+      "put": {
+        "summary": "Update a user",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The ID of the user to update"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string" }
+                },
+                "required": ["name", "email"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "integer" },
+                    "name": { "type": "string" },
+                    "email": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a user",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The ID of the user to delete"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User deleted successfully"
+          },
+          "404": {
+            "description": "User not found"
           }
         }
       }
