@@ -13,20 +13,19 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class LoginComponent {
-  user = { name: '', email: '', password: '' }; // Ajout du mot de passe
+  user = { name: '', email: '', password: '' };
   successMessage = '';
   errorMessage = '';
 
   login() {
-    // Simuler une connexion avec un utilisateur fictif
     const dummyUser = { name: 'JohnDoe', email: 'john.doe@example.com', password: '123456' };
 
     if (this.user.name === dummyUser.name && this.user.email === dummyUser.email && this.user.password === dummyUser.password) {
       this.successMessage = 'You have successfully logged in!';
-      this.errorMessage = ''; // Clear error message
+      this.errorMessage = '';
     } else {
       this.errorMessage = 'Invalid login credentials. Please try again.';
-      this.successMessage = ''; // Clear success message
+      this.successMessage = '';
     }
   }
 }
