@@ -1,11 +1,12 @@
 # Node Project
 
 # Summary
-1. [Introduction](#introduction)  
-2. [Features](#features)  
+1. [Introduction](#introduction)
+2. [Problems Encountered](#problems-encountered)
+3. [Features](#features)  
    - [Frontend](#frontend)  
    - [Backend](#backend)  
-3. [Screenshots](#screenshots)  
+4. [Screenshots](#screenshots)  
    - [Login Page](#login-page)  
    - [Film List Page](#films-list-page)   
    - [Backend API - Users](#backend-api-users)  
@@ -17,6 +18,23 @@
 ## Introduction
 The **Film Management Application** is a web-based application that allows users to log in, view a list of films, and manage their profiles.
 It is built using Angular for the frontend, Node.js for the backend, and PostgreSQL for the database
+
+## Problems Encountered
+
+### 1. **Incomplete Features**
+Some features were not fully implemented as planned. 
+For example, we had intended to create a more refined user interface that includes a dedicated space where users can view their rated movies.
+
+### 2. **Limited UI**
+While the application is functional, the user interface could be improved. 
+We aimed for a more polished design with additional features like better navigation and user-friendly layouts, but we were unable to complete this before the project's deadline.
+
+### 3. **Missing User-Specific Features**
+The user profile section is quite basic and doesn't include advanced features like the ability for users to manage their movie ratings or track their viewing history. Ideally, users would be able to see and interact with their own rated movies.
+
+---
+
+We are currently working on solutions but due to time constraints, we cannot achieve the full project in time.
 
 ## Features
 
