@@ -1,4 +1,4 @@
-# Node Project
+# Node Project done by Elias NIERES-TAVERNIER, Romain PARADA and Baptiste RAUX
 
 # Summary
 1. [Introduction](#introduction)
