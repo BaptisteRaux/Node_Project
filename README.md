@@ -15,7 +15,7 @@
 ---
 
 ## Introduction
-The **Film Management Application** is a web-based application that allows users to log in, view a list of films, and manage their profiles
+The **Film Management Application** is a web-based application that allows users to log in, view a list of films, and manage their profiles.
 It is built using Angular for the frontend, Node.js for the backend, and PostgreSQL for the database
 
 ## Features
@@ -48,5 +48,5 @@ Here is the page of the backend where we can see the informations on all the fil
 ![{9BEEB25D-F3CC-4E33-A64B-F384D3A2F9DF}](https://github.com/user-attachments/assets/7be4745c-97d3-4c2b-b029-9e5b98e04716)
 
 ### **HTTP Requests**
-Here is the page of the swagger where you can see all HTTP requests possiblities
+Here is the page of the swagger where you can see all HTTP requests possibilities
 ![{C7587AFB-8149-4532-9D36-1463C54E49BC}](https://github.com/user-attachments/assets/4271c743-d5b9-4712-bec5-dfa156f9b95b)
